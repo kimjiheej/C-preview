@@ -1,18 +1,18 @@
-//프로그램 실행 중에 원하는 크기만큼 배열을 생성하는 기능이 있다.
-
+//포인터에 할당된 메모리를 배열처럼 사용하기 
 #include<stdio.h>
+#include<stdlib.h>
 int main(void)
 {
 
-	int size;
+	int* numptr = malloc(sizeof(int) * 10);
 
-	scanf_s("%d", &size);
+	numptr[0] = 10;
+	numptr[9] = 20;
 
-	
-	
+	printf("%d\n", numptr[0]);
+	printf("%d\n", numptr[9]);
 
-
-
+	free(numptr);
 
 
 
